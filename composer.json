@@ -3,8 +3,7 @@
     "description": "user ucenter web端",
     "license": "GPL-3.0",
     "require": {
-        "ebcms/admin": "^1.0",
-        "ebcms/ucenter": "^1.0",
+        "ebcms/ucenter-admin": "^1.0",
         "ebcms/web": "^1.0",
         "tencentcloud/sms": "^3.0"
     },

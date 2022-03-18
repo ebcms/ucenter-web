@@ -20,19 +20,19 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto d-block d-lg-none">
+                <ul class="navbar-nav d-block d-lg-none">
                     {foreach $menus as $v}
                     <li class="nav-item">
                         <a class="nav-link" href="{$v.url}" target="main">{$v.title}</a>
                     </li>
                     {/foreach}
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{echo $router->build('/ebcms/ucenter-web/logout')}">退出</a>
-                    </li>
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{echo $router->build('/')}" target="_blank">访问首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{echo $router->build('/ebcms/ucenter-web/logout')}">退出</a>
                     </li>
                 </ul>
             </div>

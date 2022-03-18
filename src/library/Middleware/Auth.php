@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace App\Ebcms\UcenterWeb\Middleware;
 
 use App\Ebcms\Admin\Traits\ResponseTrait;
-use App\Ebcms\UcenterAdmin\Model\User;
+use App\Ebcms\UcenterWeb\Model\User;
 use DigPHP\Framework\Framework;
 use DigPHP\Router\Router;
+use DigPHP\Session\Session;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -25,7 +26,7 @@ class Auth implements MiddlewareInterface
             User $userModel,
             Router $router
         ) use ($request, $handler): ResponseInterface {
-            if (!$userModel->getLoginId()) {
+            if (!$userModel->getUserId()) {
                 return $this->error('请登陆！', $router->build('/ebcms/ucenter-web/login', [
                     'redirect_uri' => $this->getRedirectUri()
                 ]));

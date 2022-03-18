@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Ebcms\UcenterWeb\Http;
 
-use App\Ebcms\UcenterAdmin\Model\User;
+use App\Ebcms\UcenterWeb\Model\User;
+use DigPHP\Database\Db;
 use DigPHP\Router\Router;
 use Psr\Http\Message\ResponseInterface;
 use DigPHP\Form\Builder;
@@ -20,10 +21,11 @@ class EditInfo extends Common
 
     public function get(
         Router $router,
+        Db $db,
         User $userModel
     ) {
-        $my = $userModel->get('*', [
-            'id' => $userModel->getLoginId(),
+        $my = $db->get('ebcms_user_user', '*', [
+            'id' => $userModel->getUserId(),
         ]);
         $form = new Builder('修改个人信息');
         $form->addItem(
@@ -42,6 +44,7 @@ class EditInfo extends Common
 
     public function post(
         User $userModel,
+        Db $db,
         Request $request
     ): ResponseInterface {
         $update = [];
@@ -55,8 +58,8 @@ class EditInfo extends Common
             $update['nickname'] = mb_substr(trim($request->post('nickname')), 0, 8);
         }
         if ($update) {
-            $userModel->update($update, [
-                'id' => $userModel->getLoginId(),
+            $db->update('ebcms_user_user', $update, [
+                'id' => $userModel->getUserId(),
             ]);
         }
 

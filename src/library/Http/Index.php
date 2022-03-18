@@ -18,7 +18,7 @@ class Index extends Common
     ) {
         $menus = new SplPriorityQueue;
         foreach (array_keys(Framework::getAppList()) as $value) {
-            $tmp = $config->get('ucenter_menus@' . $value);
+            $tmp = $config->get('ucenter.menus@' . $value);
             if (is_array($tmp)) {
                 foreach ($tmp as $value) {
                     $value = array_merge([

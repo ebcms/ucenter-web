@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Ebcms\UcenterWeb\Http;
 
-use App\Ebcms\UcenterAdmin\Model\User;
+use App\Ebcms\UcenterWeb\Model\User;
 use DigPHP\Router\Router;
 
 class Logout extends Common
@@ -15,6 +15,6 @@ class Logout extends Common
         User $userModel
     ) {
         $userModel->logout();
-        return $this->success('已退出！', $router->build('/ebcms/ucenter-web/login'));
+        return $this->success('已退出！', $router->build('/ebcms/ucenter-web/index'));
     }
 }
