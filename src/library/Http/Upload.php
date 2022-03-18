@@ -39,7 +39,7 @@ class Upload extends Common
             $script_name = '/' . implode('/', array_filter(explode('/', $_SERVER['SCRIPT_NAME'])));
             $root = strlen(dirname($script_name)) > 1 ? dirname($script_name) : '';
 
-            return $this->success('上传成功！', '', [
+            return $this->success('上传成功！', [
                 'src' => $this->getRoot() . substr($path, 1) . '/' . $filename . '.' . $ext,
                 'extension' => $ext,
                 'filename' => $file->getClientFilename(),
