@@ -63,6 +63,6 @@ class EditInfo extends Common
             ]);
         }
 
-        return $this->success('操作成功！', 'javascript:history.go(-2);');
+        return $this->success('操作成功！');
     }
 }

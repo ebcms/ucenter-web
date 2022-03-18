@@ -15,6 +15,6 @@ class Logout extends Common
         User $userModel
     ) {
         $userModel->logout();
-        return $this->success('已退出！', $router->build('/ebcms/ucenter-web/index'));
+        return $this->success('已退出！', null, $router->build('/ebcms/ucenter-web/index'));
     }
 }
