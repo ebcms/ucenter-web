@@ -41,11 +41,6 @@ class SendCode
         $code = (string)random_int(100000, 999999);
         $phone = $request->post('phone');
 
-        $session->set('verify_count', 5);
-        $session->set('verify_phone', $phone);
-        $session->set('verify_code', $code);
-        return $this->success('校验码发送成功！' . $code);
-
         try {
             switch ($config->get('sms.type@ebcms/ucenter-web')) {
                 case 'tencent':
