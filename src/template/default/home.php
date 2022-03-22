@@ -8,7 +8,7 @@
         <div class="media-body">
             <h5 class="mt-0 mb-1">{$my.nickname}</h5>
             <div>
-                <code><b>电话：</b>{:substr($my['phone'], 0, 3)}****{:substr($my['phone'], 7)} <b>金币：</b>{$my.coin}</code>
+                <code><b>电话：</b>{:substr($my['phone'], 0, 3)}****{:substr($my['phone'], 7)} <b>金币：</b>{$my.coin} <b>积分：</b>{$my.score}</code>
             </div>
             <div class="mt-1">{$my['introduction']?:'暂无介绍'}</div>
         </div>

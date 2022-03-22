@@ -6,7 +6,6 @@ namespace App\Ebcms\UcenterWeb\Http;
 
 use App\Ebcms\Admin\Traits\ResponseTrait;
 use App\Ebcms\Admin\Traits\RestfulTrait;
-use App\Ebcms\UcenterAdmin\Model\Log;
 use App\Ebcms\UcenterWeb\Model\User;
 use DigPHP\Database\Db;
 use DigPHP\Framework\Config;
@@ -47,7 +46,6 @@ class Login
         User $userModel,
         Db $db,
         Config $config,
-        Log $log,
         Session $session
     ) {
 
@@ -102,7 +100,11 @@ class Login
                 'phone' => $phone,
             ]);
 
-            $log->record($user['id'], 'reg');
+            $db->insert('ebcms_user_message', [
+                'user_id' => $user['id'],
+                'title' => '欢迎注册',
+                'body' => '请遵守社区准则，谢谢~',
+            ]);
         }
 
         if ($user['state'] != 1) {
@@ -123,6 +125,12 @@ class Login
         } else {
             $url = $router->build('/ebcms/ucenter-web/index');
         }
+
+        $db->insert('ebcms_user_message', [
+            'user_id' => $user['id'],
+            'title' => '登录提醒',
+            'body' => '您的账户刚刚登录了系统~',
+        ]);
 
         return $this->success('登陆成功！', null, $url);
     }

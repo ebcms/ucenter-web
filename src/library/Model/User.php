@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Ebcms\UcenterWeb\Model;
 
-use App\Ebcms\UcenterAdmin\Model\Log;
 use DigPHP\Database\Db;
 use DigPHP\Framework\Config;
 use DigPHP\Session\Session;
@@ -15,23 +14,19 @@ class User
     private $db;
     private $session;
     private $config;
-    private $log;
 
     public function __construct(
         Db $db,
         Session $session,
-        Config $config,
-        Log $log
+        Config $config
     ) {
         $this->db = $db;
         $this->session = $session;
         $this->config = $config;
-        $this->log = $log;
     }
 
     public function login(int $uid): bool
     {
-        $this->log->record($uid, 'login');
         $this->session->set('ucenter_user_id', $uid);
         setcookie($this->getTokenKey(), $this->makeToken($uid), time() + (int)$this->config->get('auth.expire_time@ebcms.ucenter-web', 0), '/');
         return true;
@@ -39,7 +34,6 @@ class User
 
     public function logout(): bool
     {
-        $this->log->record($this->getUserId(), 'logout');
         setcookie($this->getTokenKey(), '', time() - 3600, '/');
         $this->session->delete('ucenter_user_id');
         return true;

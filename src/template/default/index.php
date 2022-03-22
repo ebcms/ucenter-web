@@ -93,7 +93,15 @@
                 <ul class="nav flex-column" id="leftnav">
                     {foreach $menus as $v}
                     <li class="nav-item">
-                        <a class="nav-link text-truncate py-3 px-4 font-weight-bold text-secondary" href="{$v.url}" target="{$v['target']??'main'}">{if isset($v['icon']) && $v['icon']}<span class="me-2"><img src="{$v['icon']}" alt="" style="width:20px;height:20px;"></span>{/if}{$v.title}{if strlen($v['badge'])}<span class="badge badge-danger badge-pill ml-1">{$v['badge']}</span>{/if}</a>
+                        <a class="nav-link text-truncate py-3 px-4 font-weight-bold text-secondary position-relative" href="{$v.url}" target="{$v['target']??'main'}" data-bs-toggle="tooltip" data-bs-placement="right" title="{$v['tips']??''}">
+                            <span class="me-2"><img src="{echo $v['icon']}" width="20" height="20" alt=""></span>
+                            <span>{$v.title}</span>
+                            {if isset($v['tips']) && $v['tips']}
+                            <span class="position-absolute top-50 end-0 translate-middle-y me-2 p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                            {/if}
+                        </a>
                     </li>
                     {/foreach}
                 </ul>
@@ -101,6 +109,8 @@
             <script>
                 $("#leftnav > li").bind("click", function() {
                     $(this).addClass("cur").siblings().removeClass("cur");
+                    $(this).find('span.position-absolute').remove();
+                    $(this).find('a.nav-link').removeAttr('data-bs-original-title');
                 });
             </script>
             <style>
@@ -137,6 +147,16 @@
             <iframe src="{echo $router->build('/ebcms/ucenter-web/home')}" id="mainiframe" name="main" style="width:100%;height:100%;overflow:auto;display:block;" frameborder="0"></iframe>
         </div>
     </div>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        });
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
 </body>
 
 </html>
