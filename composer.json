@@ -4,7 +4,6 @@
     "license": "GPL-3.0",
     "require": {
         "ebcms/ucenter-admin": "^1.0",
-        "ebcms/web": "^1.0",
         "tencentcloud/sms": "^3.0"
     },
     "autoload": {
