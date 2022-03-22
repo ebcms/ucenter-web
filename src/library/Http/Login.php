@@ -101,9 +101,10 @@ class Login
             ]);
 
             $db->insert('ebcms_user_message', [
-                'user_id' => $user['id'],
-                'title' => '欢迎注册',
-                'body' => '请遵守社区准则，谢谢~',
+                'user_id' => 1,
+                'title' => '用户协议',
+                'body' => $config->get('auth.policy@ebcms.ucenter-web'),
+                'send_time' => time(),
             ]);
         }
 

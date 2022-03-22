@@ -105,7 +105,7 @@
                         {/if}
                         <span class="text-muted ms-3" title="{:date(DATE_ISO8601, $vo['send_time'])}">{:format_date($vo['send_time'])}</span>
                         <div class="collapse" id="collapse{$vo.id}">
-                            <div class="border border-warning p-2 mt-2 bg-warning bg-opacity-10">
+                            <div class="border border-warning p-3 mt-2 bg-warning bg-opacity-10">
                                 {echo $vo['body']}
                             </div>
                         </div>
