@@ -2,8 +2,8 @@
 
 use App\Ebcms\UcenterWeb\Model\User;
 use DigPHP\Database\Db;
-use DigPHP\Framework\Framework;
 use DigPHP\Router\Router;
+use Ebcms\Framework\Framework;
 
 return [
     'menus' => Framework::execute(function (

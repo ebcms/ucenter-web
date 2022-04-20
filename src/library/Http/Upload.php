@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Ebcms\UcenterWeb\Http;
 
-use DigPHP\Framework\Config;
+use Ebcms\Framework\Config;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\UploadedFileInterface;
 

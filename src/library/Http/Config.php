@@ -12,9 +12,9 @@ use DigPHP\Form\Component\Row;
 use DigPHP\Form\Field\Input;
 use DigPHP\Form\Field\Radio;
 use DigPHP\Form\Field\Summernote;
-use DigPHP\Framework\Config as EbcmsConfig;
 use DigPHP\Request\Request;
 use DigPHP\Router\Router;
+use Ebcms\Framework\Config as EbcmsConfig;
 
 class Config extends Common
 {

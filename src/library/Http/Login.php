@@ -8,11 +8,11 @@ use App\Ebcms\Admin\Traits\ResponseTrait;
 use App\Ebcms\Admin\Traits\RestfulTrait;
 use App\Ebcms\UcenterWeb\Model\User;
 use DigPHP\Database\Db;
-use DigPHP\Framework\Config;
 use DigPHP\Router\Router;
 use DigPHP\Request\Request;
 use DigPHP\Session\Session;
 use DigPHP\Template\Template;
+use Ebcms\Framework\Config;
 
 class Login
 {

@@ -6,9 +6,8 @@ namespace App\Ebcms\UcenterWeb\Middleware;
 
 use App\Ebcms\Admin\Traits\ResponseTrait;
 use App\Ebcms\UcenterWeb\Model\User;
-use DigPHP\Framework\Framework;
 use DigPHP\Router\Router;
-use DigPHP\Session\Session;
+use Ebcms\Framework\Framework;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;

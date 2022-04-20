@@ -7,7 +7,7 @@ namespace App\Ebcms\UcenterWeb\Http;
 use App\Ebcms\Admin\Traits\ResponseTrait;
 use App\Ebcms\Admin\Traits\RestfulTrait;
 use App\Ebcms\UcenterWeb\Middleware\Auth;
-use DigPHP\Framework\Framework;
+use Ebcms\Framework\Framework;
 
 abstract class Common
 {

@@ -12,8 +12,8 @@ use DigPHP\Form\Component\Row;
 use DigPHP\Form\Component\SwitchItem;
 use DigPHP\Form\Component\Switchs;
 use DigPHP\Form\Field\Input;
-use DigPHP\Framework\Config as EbcmsConfig;
 use DigPHP\Request\Request;
+use Ebcms\Framework\Config as EbcmsConfig;
 
 class Sms extends Common
 {

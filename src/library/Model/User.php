@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Ebcms\UcenterWeb\Model;
 
 use DigPHP\Database\Db;
-use DigPHP\Framework\Config;
 use DigPHP\Session\Session;
+use Ebcms\Framework\Config;
 
 class User
 {

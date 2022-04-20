@@ -6,9 +6,9 @@ namespace App\Ebcms\UcenterWeb\Http;
 
 use App\Ebcms\Admin\Traits\ResponseTrait;
 use App\Ebcms\Admin\Traits\RestfulTrait;
-use DigPHP\Framework\Config;
 use DigPHP\Request\Request;
 use DigPHP\Session\Session;
+use Ebcms\Framework\Config;
 use Exception;
 use TencentCloud\Common\Credential;
 use TencentCloud\Common\Profile\ClientProfile;
