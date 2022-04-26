@@ -8,7 +8,7 @@ use App\Ebcms\Admin\Traits\ResponseTrait;
 use App\Ebcms\Admin\Traits\RestfulTrait;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
-use DigPHP\Session\Session;
+use DiggPHP\Session\Session;
 use Gregwar\Captcha\CaptchaBuilder;
 
 class Captcha

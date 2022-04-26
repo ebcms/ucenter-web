@@ -7,12 +7,12 @@ namespace App\Ebcms\UcenterWeb\Http;
 use App\Ebcms\Admin\Traits\ResponseTrait;
 use App\Ebcms\Admin\Traits\RestfulTrait;
 use App\Ebcms\UcenterWeb\Model\User;
-use DigPHP\Database\Db;
-use DigPHP\Router\Router;
-use DigPHP\Request\Request;
-use DigPHP\Session\Session;
-use DigPHP\Template\Template;
-use Ebcms\Framework\Config;
+use DiggPHP\Database\Db;
+use DiggPHP\Router\Router;
+use DiggPHP\Request\Request;
+use DiggPHP\Session\Session;
+use DiggPHP\Template\Template;
+use DiggPHP\Framework\Config;
 
 class Login
 {

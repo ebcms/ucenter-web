@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Ebcms\UcenterWeb\Model;
 
-use DigPHP\Database\Db;
-use DigPHP\Session\Session;
-use Ebcms\Framework\Config;
+use DiggPHP\Database\Db;
+use DiggPHP\Session\Session;
+use DiggPHP\Framework\Config;
 
 class User
 {

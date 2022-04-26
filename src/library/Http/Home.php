@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Ebcms\UcenterWeb\Http;
 
 use App\Ebcms\UcenterWeb\Model\User;
-use DigPHP\Database\Db;
-use DigPHP\Template\Template;
+use DiggPHP\Database\Db;
+use DiggPHP\Template\Template;
 
 class Home extends Common
 {

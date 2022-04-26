@@ -6,15 +6,15 @@ namespace App\Ebcms\UcenterWeb\Http;
 
 use App\Ebcms\Admin\Http\Common;
 use App\Ebcms\Admin\Model\Config as ModelConfig;
-use DigPHP\Form\Builder;
-use DigPHP\Form\Component\Col;
-use DigPHP\Form\Component\Row;
-use DigPHP\Form\Field\Input;
-use DigPHP\Form\Field\Radio;
-use DigPHP\Form\Field\Summernote;
-use DigPHP\Request\Request;
-use DigPHP\Router\Router;
-use Ebcms\Framework\Config as EbcmsConfig;
+use DiggPHP\Form\Builder;
+use DiggPHP\Form\Component\Col;
+use DiggPHP\Form\Component\Row;
+use DiggPHP\Form\Field\Input;
+use DiggPHP\Form\Field\Radio;
+use DiggPHP\Form\Field\Summernote;
+use DiggPHP\Request\Request;
+use DiggPHP\Router\Router;
+use DiggPHP\Framework\Config as EbcmsConfig;
 
 class Config extends Common
 {

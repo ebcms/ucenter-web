@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\Ebcms\UcenterWeb\Http;
 
 use App\Ebcms\UcenterWeb\Model\User;
-use DigPHP\Database\Db;
-use DigPHP\Pagination\Pagination;
-use DigPHP\Request\Request;
-use DigPHP\Template\Template;
+use DiggPHP\Database\Db;
+use DiggPHP\Pagination\Pagination;
+use DiggPHP\Request\Request;
+use DiggPHP\Template\Template;
 
 class Message extends Common
 {

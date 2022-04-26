@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Ebcms\UcenterWeb\Http;
 
-use DigPHP\Template\Template;
-use Ebcms\Framework\Config;
-use Ebcms\Framework\Framework;
+use DiggPHP\Template\Template;
+use DiggPHP\Framework\Config;
+use DiggPHP\Framework\Framework;
 use SplPriorityQueue;
 
 class Index extends Common

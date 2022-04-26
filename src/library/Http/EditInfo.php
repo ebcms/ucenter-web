@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace App\Ebcms\UcenterWeb\Http;
 
 use App\Ebcms\UcenterWeb\Model\User;
-use DigPHP\Database\Db;
-use DigPHP\Router\Router;
+use DiggPHP\Database\Db;
+use DiggPHP\Router\Router;
 use Psr\Http\Message\ResponseInterface;
-use DigPHP\Form\Builder;
-use DigPHP\Form\Component\Col;
-use DigPHP\Form\Field\Cover;
-use DigPHP\Form\Field\Input;
-use DigPHP\Form\Field\Textarea;
-use DigPHP\Form\Component\Row;
-use DigPHP\Request\Request;
+use DiggPHP\Form\Builder;
+use DiggPHP\Form\Component\Col;
+use DiggPHP\Form\Field\Cover;
+use DiggPHP\Form\Field\Input;
+use DiggPHP\Form\Field\Textarea;
+use DiggPHP\Form\Component\Row;
+use DiggPHP\Request\Request;
 
 class EditInfo extends Common
 {
